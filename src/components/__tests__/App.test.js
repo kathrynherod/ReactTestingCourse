@@ -10,4 +10,11 @@ describe('App Component', () => {
     //this clears the element(s) rendered to free up testing memory
     ReactDOM.unmountComponentAtNode(div);
   });
+  it('shows the comment list', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    expect(div.innerHTML).toContain('Comment List');
+    //this clears the element(s) rendered to free up testing memory
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });
